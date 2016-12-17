@@ -32,7 +32,7 @@ $('button').on('click', function(event) {
       articleElements.append(storySnippet);
       storyHeadline = $('<h4>').text(res.response.docs[i].headline.main);
       articleElements.prepend(storyHeadline);
-      hr = $('<hr/>');
+      hr = $('<hr />');
       // make the text of the element the main headline
       articleElements.text(res.response.docs[i].headline.main);
       articleElements.append(hr);
