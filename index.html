@@ -11,34 +11,38 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <form>
-            <div class="form-group">
-              <label >Search Term:</label>
-              <input type="text" class="form-control" id="search" >
-            </div>
-            <div>
-              <label>Number of Records to Retrieve</label>
-              <select class="form-control">
-                <option>10</option>
-                <option>5</option>
-                <option>1</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Start Year (Optional)</label>
-              <input type="text" class="form-control" id="term">
-            </div>
-            <div class="form-group">
-              <label>End Year (Optional)</label>
-              <input type="text" class="form-control" id="term">
-            </div>
-            <button type="submit" class="btn btn-default">Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
+        <div class="row">
+          <div class="col-sm-6">
+  			<div class = "Title">New York Times Search</div>
+  			<form>
+  				<p class="formTitle">Search Parameters</p>
+  			  <div class="form-group">
+  				<label >Search Term:</label>
+  				<input type="text" class="form-control" id="term">
+  			  </div>
+  			  <div class="form-group" style="margin-top: 30px">
+  				<label>Number of Records to Retrieve</label>
+  					 <select class="form-control">
+  					  <option>10</option>
+  					  <option>5</option>
+  					  <option>1</option>
+  					</select>
+  				</div>
+  			  <div class="form-group">
+  				<label>Start Year (Optional)</label>
+  				<input type="text" class="form-control" id="startYear">
+  			  </div>
+  			  <div class="form-group">
+  				<label>End Year (Optional)</label>
+  				<input type="text" class="form-control" id="endYear">
+  			  </div>
+  			  <button type="submit" class="btn btn-default">Submit</button>
+  			</form>
+  			<div class = "Results">
+  			</div>
+  		</div>
+  	   </div>
+  	</div>
     <!-- Javascript Links -->
     <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
 
