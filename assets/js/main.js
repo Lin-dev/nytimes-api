@@ -4,7 +4,7 @@ $('button').on('click', function(event) {
   // this stops stops the default behavior
   // and stops the page from reloading due to the submit buttons
   // default behavior.
-  event.preventDefault()
+  event.preventDefault();
 
   // this line grabs the value of the search input
   var queryItem = $("#search").val();
@@ -25,15 +25,15 @@ $('button').on('click', function(event) {
     $("#results").empty();
     // for the number of results returned
     for(var i = 0; i < res.response.docs.length; i++){
-      console.log(res.response.docs[i].headline.main)
+      console.log(res.response.docs[i].headline.main);
       // create a new element
       articleElements = $("<p>");
       hr = $('<hr/>');
       // make the text of the element the main headline
-      articleElements.text(res.response.docs[i].headline.main)
-      articleElements.append(hr)
+      articleElements.text(res.response.docs[i].headline.main);
+      articleElements.append(hr);
       // attachs the results of the iteration to the 'results' div
-      $('#results').prepend(articleElements)
+      $('#results').prepend(articleElements);
     }
   });
 })
