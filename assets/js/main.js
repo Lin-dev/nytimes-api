@@ -1,11 +1,8 @@
-
-
-$('button').on('click', function() {
-
+$('button').on('click', function(e) {
+  e.preventDefault()
   var queryItem = $("#search").val();
 
   var url = 'http://api.nytimes.com/svc/search/v2/articlesearch.json?q="' + queryItem + '"&sort=newest&&api-key=0ae332e50b7a4da8a9a8c64c50efbbec';
-
 
   console.log(queryItem);
 
