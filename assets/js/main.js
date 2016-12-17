@@ -28,12 +28,17 @@ $('button').on('click', function(event) {
       console.log(res.response.docs[i].headline.main);
       // create a new element
       articleElements = $("<div>");
-      articleLink = $('<p>').html("Link: <a href='" + res.response.docs[i].web_url + "'>"+res.response.docs[i].web_url+ "</a>");
-      articleElements.append(articleLink);
+      // articleLink = $('<p>').html("Link: <a href='" + res.response.docs[i].web_url + "'>"+res.response.docs[i].web_url+ "</a>");
+      // articleElements.append(articleLink);
+      articleLink = $('<a>').attr("href", res.response.docs[i].web_url);
+      storyHeadline = $('<h2>').text(res.response.docs[i].headline.main);
+      articleLink.append(storyHeadline);
+
+
       storySnippet = $("<p>").text(res.response.docs[i].snippet);
       articleElements.append(storySnippet);
-      storyHeadline = $('<h4>').text(res.response.docs[i].headline.main);
-      articleElements.prepend(storyHeadline);
+
+      articleElements.prepend(articleLink);
       hr = $('<hr/>');
       // make the text of the element the main headline
       // articleElements.text(res.response.docs[i].headline.main);
