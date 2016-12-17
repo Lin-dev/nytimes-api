@@ -10,9 +10,13 @@ $('button').on('click', function(e) {
     url: url,
     method: 'GET'
   }).done(function(response){
+    console.log(response);
     res = response;
     for(var i = 0; i < res.response.docs.length; i++){
       console.log(res.response.docs[i].headline.main)
+      articleElements = $("<p>");
+      articleElements.text(res.response.docs[i].headline.main)
+      $('#results').prepend(articleElements)
     }
   });
 

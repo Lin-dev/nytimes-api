@@ -1,20 +1,3 @@
-.Title {
-	text-align: center;
-	background: #132764;
-	color: #fff;
-	font-size: 30px;
-	padding: 20px;
-}
-
-form {
-	padding: 20px;
-	margin-top: 30px;
-	border: solid 1px #132764;
-
-}
-
-.formTitle {
-	font-size: 20px;
-	background-color: #DCD9D9;
-	padding: 10px;
+#article-results-area {
+  margin-top: 40px;
 }
