@@ -1,10 +1,10 @@
 // this attachs a click event to ALL buttons on the page
-$('button').on('click', function(e) {
+$('button').on('click', function(event) {
 
   // this stops stops the default behavior
   // and stops the page from reloading due to the submit buttons
   // default behavior.
-  e.preventDefault()
+  event.preventDefault()
 
   // this line grabs the value of the search input
   var queryItem = $("#search").val();
