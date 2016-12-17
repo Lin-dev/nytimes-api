@@ -27,12 +27,13 @@ $('button').on('click', function(event) {
     for(var i = 0; i < res.response.docs.length; i++){
       console.log(res.response.docs[i].headline.main)
       // create a new element
-      articleElements = $("<p>");
+      articleElements = $("<div>");
+      storySnippet = $("<p>").text(res.response.docs[i].snippet);
+      articleElements.append(storySnippet);
+      storyHeadline = $('<h4>').text(res.response.docs[i].headline.main);
+      articleElements.prepend(storyHeadline)
       hr = $('<hr/>');
-      // make the text of the element the main headline
-      articleElements.text(res.response.docs[i].headline.main)
-      articleElements.append(hr)
-      // attachs the results of the iteration to the 'results' div
+
       $('#results').prepend(articleElements)
     }
   });
