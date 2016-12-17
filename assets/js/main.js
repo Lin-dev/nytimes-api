@@ -28,7 +28,6 @@ $('button').on('click', function(event) {
       console.log(res.response.docs[i].headline.main);
       // create a new element
       articleElements = $("<div>");
-      // creates link to article and appends to element
       articleLink = $('<p>').html("Link: <a href='" + res.response.docs[i].web_url + "'>"+res.response.docs[i].web_url+ "</a>");
       articleElements.append(articleLink);
       storySnippet = $("<p>").text(res.response.docs[i].snippet);
@@ -37,7 +36,7 @@ $('button').on('click', function(event) {
       articleElements.prepend(storyHeadline);
       hr = $('<hr/>');
       // make the text of the element the main headline
-      articleElements.text(res.response.docs[i].headline.main);
+      // articleElements.text(res.response.docs[i].headline.main);
       articleElements.append(hr);
       // attachs the results of the iteration to the 'results' div
       $('#results').prepend(articleElements);
