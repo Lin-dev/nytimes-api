@@ -12,10 +12,13 @@ $('button').on('click', function(e) {
   }).done(function(response){
     console.log(response);
     res = response;
+    $("#results").empty();
     for(var i = 0; i < res.response.docs.length; i++){
       console.log(res.response.docs[i].headline.main)
       articleElements = $("<p>");
+      hr = $('<hr/>');
       articleElements.text(res.response.docs[i].headline.main)
+      articleElements.append(hr)
       $('#results').prepend(articleElements)
     }
   });
