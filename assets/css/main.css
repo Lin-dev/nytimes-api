@@ -17,11 +17,8 @@ body {
 }
 
 .badge {
-  border-radius: 6px;
-  line-height: inherit;
-  width: 55px;
+  margin-right: 25px;
+  border-radius: 50%;
+  background-color: #0D9ADB;
   padding: 10px;
-
-  margin-right: 6px;
-  font-size: 18px;
 }
