@@ -34,7 +34,6 @@ $('button').on('click', function(event) {
       storyHeadline = $('<h2>').text(res.response.docs[i].headline.main);
       articleLink.append(storyHeadline);
 
-
       storySnippet = $("<p>").text(res.response.docs[i].snippet);
       articleElements.append(storySnippet);
 
