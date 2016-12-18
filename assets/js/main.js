@@ -28,8 +28,8 @@ $('button').on('click', function(event) {
       console.log(res.response.docs[i].headline.main);
       // create a new element
       articleElements = $("<div>");
-      numberButton = $('<a>');
-      numberButton.addClass("btn btn-primary btn-lg disabled");
+      numberButton = $('<span>');
+      numberButton.addClass("badge pull-left");
       numberButton.text(i+1);
       articleLink = $('<a>').attr("href", res.response.docs[i].web_url);
       storyHeadline = $('<h2>').text(res.response.docs[i].headline.main);
@@ -44,7 +44,7 @@ $('button').on('click', function(event) {
 
       articleElements.append(hr);
       // attachs the results of the iteration to the 'results' div
-      $('#results').prepend(articleElements);
+      $('#results').append(articleElements);
     }
   });
 })
